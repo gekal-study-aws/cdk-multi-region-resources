@@ -18,6 +18,8 @@ The `cdk.json` file tells the CDK Toolkit how to execute your app.
 $ cdk list
 PrimaryRegionStack
 SecondRegionStack
+PrimaryRegionRouteStack
+SecondRegionRouteStack
 ```
 
 ## 環境作成
