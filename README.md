@@ -45,7 +45,13 @@ cdk deploy "*" --tags tester=gekal
 
 ```bash
 $ cdk destroy "*"
-Are you sure you want to delete: SecondRegionStack, PrimaryRegionStack (y/n)? y
+Are you sure you want to delete: SecondRegionRouteStack, PrimaryRegionRouteStack, SecondRegionStack, PrimaryRegionStack (y/n)? y
+SecondRegionRouteStack: destroying...
+
+ ✅  SecondRegionRouteStack: destroyed
+PrimaryRegionRouteStack: destroying...
+
+ ✅  PrimaryRegionRouteStack: destroyed
 SecondRegionStack: destroying...
 
  ✅  SecondRegionStack: destroyed
@@ -66,3 +72,4 @@ PrimaryRegionStack: destroying...
 ## 参照
 
 1. [Using CDK to perform continuous deployments in multi-region Kubernetes environments](https://aws.amazon.com/jp/blogs/containers/using-cdk-to-perform-continuous-deployments-in-multi-region-kubernetes-environments/)
+2. [interface StackProps](https://docs.aws.amazon.com/cdk/api/v2/docs/aws-cdk-lib.StackProps.html)
