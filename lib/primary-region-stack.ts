@@ -3,6 +3,9 @@ import { Construct } from 'constructs';
 import * as ec2 from 'aws-cdk-lib/aws-ec2';
 
 export class PrimaryRegionStack extends cdk.Stack {
+
+    readonly _vpc: ec2.Vpc;
+
     constructor(scope: Construct, id: string, props?: cdk.StackProps) {
         super(scope, id, props);
 
@@ -16,5 +19,10 @@ export class PrimaryRegionStack extends cdk.Stack {
                 }
             ]
         });
+        this._vpc = vpc;
+    }
+
+    get vpc() {
+        return this._vpc;
     }
 }
